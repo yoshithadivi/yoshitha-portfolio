@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   THEME TOKENS
+========================================= */
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 214 95% 93%;
+    --accent-foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --border: 214 32% 91%;
+  }
+
+  .dark {
+    --background: 222 84% 4%;
+    --foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --card: 222 40% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%;
+  }
+}
+
+/* =========================================
+   BASE STYLES
+========================================= */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30;
+  }
+
+  html:not(.dark) body {
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.12), transparent 28%),
+      radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.10), transparent 30%),
+      radial-gradient(circle at 20% 70%, rgba(96, 165, 250, 0.08), transparent 24%),
+      radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.07), transparent 24%);
+    background-attachment: fixed;
+  }
+
+
+  .dark body {
+    background-image:
+      radial-gradient(circle at top right, rgba(59, 130, 246, .08), transparent 30%),
+      radial-gradient(circle at bottom left, rgba(59, 130, 246, .05), transparent 35%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* =========================================
+   REUSABLE UTILITIES
+========================================= */
+@layer components {
+  .glass {
+    @apply bg-background/80 backdrop-blur-md border-b border-border;
+  }
+
+  .glass-card {
+    @apply bg-card/85 backdrop-blur-md border border-border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-20;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-10;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground max-w-2xl text-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all duration-300 shadow-md hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full border border-border bg-background hover:bg-muted font-medium transition-all duration-300;
+  }
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
