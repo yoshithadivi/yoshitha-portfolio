@@ -20,7 +20,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const observers = [];
+    const observers: IntersectionObserver[] = [];
 
     links.forEach((link) => {
       const section = document.getElementById(link.id);
@@ -64,8 +64,8 @@ export default function Navbar() {
                     <a
                       href={link.href}
                       className={`transition-colors ${isActive
-                          ? "text-foreground"
-                          : "text-muted-foreground hover:text-foreground"
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
                         }`}
                     >
                       {link.name}
