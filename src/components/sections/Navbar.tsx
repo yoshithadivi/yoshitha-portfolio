@@ -113,6 +113,41 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl"
+        >
+          <ul className="flex flex-col px-6 py-5 space-y-4 text-sm font-medium">
+            {links.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+
+            <li className="pt-4 border-t border-border">
+              <a
+                href="/Yoshitha_Divi_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="inline-block bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium"
+              >
+                Resume
+              </a>
+            </li>
+          </ul>
+        </motion.div>
+      )}
     </nav>
   );
 }
