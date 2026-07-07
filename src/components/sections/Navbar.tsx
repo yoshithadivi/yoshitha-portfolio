@@ -91,7 +91,7 @@ export default function Navbar() {
               </button>
 
               <a
-                href="/Yoshitha_Divi_Resume.pdf"
+                href="/YOSHITHA_DIVI_ECommerce_Resume_2026-07-07.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-foreground text-background px-5 py-2 rounded-full text-sm font-medium hover:bg-foreground/90 transition-colors"
