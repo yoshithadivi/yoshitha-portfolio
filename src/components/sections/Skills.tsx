@@ -12,6 +12,7 @@ const skills = [
       "Tailwind CSS",
       "HTML/CSS",
       "Responsive UI",
+      "Next.js"
     ],
   },
   {
