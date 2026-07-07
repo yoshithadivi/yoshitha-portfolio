@@ -54,13 +54,13 @@ const projects = [
     type: "Internal Tools",
     summary:
       "Created internal commerce tools and Shopify apps to improve merchandising, conversion, and business efficiency.",
-    tech: ["React", "Node.js", "Shopify", "Next.js],
+    tech: ["React", "Node.js", "Shopify", "Next.js"],
     achievements: [
       "Built merchant admin dashboards featuring customer review automation and real-time order tracking",
       "Developed high-converting cart, checkout, and slide-out minicart experiences for shoppers",
       "Implemented advanced search tools, dynamic filters, and interactive product bundle builders",
       "Created custom wishlist features allowing users to create and manage multiple wishlists",
-      "Designed a B2B multi-cart management system along with quote request and tracking widgets"
+      "Designed a B2B multi-cart management system along with quote request and tracking widgets",
     ],
   },
 ];
