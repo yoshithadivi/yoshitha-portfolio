@@ -136,7 +136,7 @@ export default function Navbar() {
 
             <li className="pt-4 border-t border-border">
               <a
-                href="/Yoshitha_Divi_Resume.pdf"
+                href="/YOSHITHA_DIVI_ECommerce_Resume_2026-07-07.pdf"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setIsOpen(false)}
