@@ -28,7 +28,7 @@ export default function Contact() {
             <FiMail /> Send Email
           </a>
           <a
-            href="/Yoshitha_Divi_Resume.pdf"
+            href="/YOSHITHA_DIVI_ECommerce_Resume_2026-07-07.pdf"
             download="Yoshitha_Divi_Resume.pdf"
             className="inline-flex items-center justify-center h-14 px-8 w-full sm:w-auto rounded-full border border-border bg-background hover:bg-muted font-medium transition-all gap-2 text-lg"
           >
